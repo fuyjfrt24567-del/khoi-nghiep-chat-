@@ -19,3 +19,18 @@ theo thời gian thực.
 ---
 
 ## 📂 Cấu trúc project
+---
+
+## 🗄️ Cơ sở dữ liệu
+
+Ứng dụng sử dụng cơ sở dữ liệu để lưu trữ thông tin người dùng và lịch sử tin nhắn.
+
+### Các bảng chính:
+- **user**: lưu thông tin tài khoản
+- **message**: lưu nội dung tin nhắn
+
+File thiết kế CSDL: `database.sql`
+
+> Hiện tại chương trình chat hoạt động bằng Socket (Client–Server).  
+> CSDL được thiết kế để phục vụ việc mở rộng trong tương lai.
+
