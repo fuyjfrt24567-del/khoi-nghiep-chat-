@@ -51,13 +51,16 @@ public class Server {
 
         });
 
+        new Thread(() -> {
+    try {
         while(true){
-
             String msg = in.readLine();
-
-            chatArea.append("Client: " + msg + "\n");
-
+            chatArea.append("Server: " + msg + "\n");
         }
+    } catch(Exception e){
+        e.printStackTrace();
+    }
+}).start();
     }
 
     public static void main(String[] args) throws Exception {

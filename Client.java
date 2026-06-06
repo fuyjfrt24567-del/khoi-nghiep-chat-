@@ -48,13 +48,16 @@ public class Client {
 
         });
 
+        new Thread(() -> {
+    try {
         while(true){
-
             String msg = in.readLine();
-
             chatArea.append("Server: " + msg + "\n");
-
         }
+    } catch(Exception e){
+        e.printStackTrace();
+    }
+}).start();
     }
 
     public static void main(String[] args) throws Exception {
